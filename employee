@@ -1,0 +1,48 @@
+import java.util.*;
+class Employee
+{
+String name,city;
+float salary; 
+int yoj;
+public void input(String name, String city, float salary, int yoj)
+{
+this.name = name;
+this.city = city;
+this.salary = salary;
+this.yoj = yoj;          
+}
+public void print()
+{
+System.out.println(name  + "\t\t" + city + "\t\t" + salary + "\t\t" +yoj );  
+}
+public static void main(String[] args)
+{
+String[] name = new String[3];
+int[] yoj = new int[3];
+float[] salary = new float [3];
+String[] city = new String[3];
+Scanner sc = new Scanner(System.in);
+for (int i = 1; i<=3; i++)
+{  
+System.out.println("Enter Employee " +i+" Information:");
+System.out.println("Enter the name of Employee: ");
+name[i]=sc.nextLine();
+System.out.println("Enter Year of Joining: ");
+yoj[i]=sc.nextInt();
+System.out.println("Enter Salary: ");
+salary[i]=sc.nextFloat();
+System.out.println("Enter City: ");
+city[i]=sc.nextLine();
+}
+Employee em1 = new Employee(); 
+Employee em2 = new Employee();
+Employee em3 = new Employee();
+em1.input(name[0],city[0],salary[0], yoj[0]);
+em2.input(name[1],city[1],salary[1], yoj[1]);
+em3.input(name[2],city[2],salary[2], yoj[2]);
+System.out.println("Name \t\tAddress \tddSalary   \tYear Of Joining");
+em1.print();
+em2.print();
+em3.print();
+}
+}
